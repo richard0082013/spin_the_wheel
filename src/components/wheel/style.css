@@ -1,0 +1,15 @@
+.the_wheel {
+  position:relative;
+  width: 434px;
+  padding-top: 5rem;
+}
+
+#canvas {
+  z-index: 1;
+}
+.prizePointer {
+  position: absolute;
+  left: 192px;
+  top: 35px;
+  z-index: 999;
+}
