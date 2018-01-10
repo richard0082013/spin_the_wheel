@@ -9,14 +9,21 @@ class Wheel extends Component {
 	constructor() {
 		super();
 		this.state = {
-			wheel: {}
+			wheel: {},
+			numb: []
 		}
 	}
 
 	componentDidMount = () => {
-
+		const _this = this;
 		const onStopRotation = function(res) {
-			console.log('fuck you richard!', res.text);
+			_this.setState((currentState) => {
+				const newNumb = currentState.numb.slice(0, 4);
+				return ({
+					...currentState,
+					numb: [res.text, ...newNumb]
+				});
+			});
 		}
 
 		var theWheel = new Winwheel (
@@ -72,12 +79,11 @@ class Wheel extends Component {
 		}
 
 		this.setState({
-			wheel: theWheel
+			wheel: theWheel,
 		})
 	}
 	render() {
-
-
+		console.log('Render new value', this.state.numb);
 		return (
 			<div align="center">
 							<h1>Spin the Wheel</h1>
