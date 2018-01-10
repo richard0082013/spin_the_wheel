@@ -67,16 +67,9 @@ class Wheel extends Component {
 		};
 		function resetWheel()
 		{
-  // Stop the animation, false as param so does not call callback function.
 				theWheel.rotationAngle = 0;     // Re-set the wheel angle to 0 degrees.
-				theWheel.draw();                // Call draw to render changes to the wheel.        // Reset to false to power buttons and spin can be clicked again.
+				theWheel.draw();                // Call draw to render changes to the wheel.     
 		}
-		// function alertPrize()
-		// {
-		// 	var numPointed = theWheel.getIndicatedSegment();
-		// 	console.log(theWheel.segments[numPointed]);
-
-		// }
 
 		this.setState({
 			wheel: theWheel
