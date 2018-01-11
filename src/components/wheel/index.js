@@ -83,7 +83,7 @@ class Wheel extends Component {
 		})
 	}
 	render() {
-		console.log('Render new value', this.state.numb);
+		// console.log('Render new value', this.state.numb);
 		return (
 			<div align="center">
 							<h1>Spin the Wheel</h1>
@@ -96,6 +96,14 @@ class Wheel extends Component {
 									</canvas>
 									<img className="prizePointer" src={pointers} alt="V" />
 							</div>
+							<div>
+								<p>
+									Here is the results after last five spinning:
+								</p>
+								<p>
+								{this.state.numb.join('-')}
+								</p>
+						  </div>
 					</div>
 		);
 	}
