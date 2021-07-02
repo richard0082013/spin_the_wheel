@@ -16,7 +16,7 @@ class Wheel extends Component {
 
   componentDidMount = () => {
     const _this = this;
-    const onStopRotation = function(res) {
+    const onStopRotation = function (res) {
       _this.setState(currentState => {
         const newNumb = currentState.numb.slice(0, 4);
         return {
@@ -27,7 +27,7 @@ class Wheel extends Component {
     };
 
     var theWheel = new Winwheel({
-      numSegments: 10, // Specify number of segments.
+      numSegments: 11, // Specify number of segments.
       outerRadius: 212, // Set outer radius so wheel fits inside the background.
       textFontSize: 28, // Set font size as desired.
       onStopRotation: onStopRotation,
@@ -61,9 +61,9 @@ class Wheel extends Component {
     });
 
     var canvas = document.getElementById("canvas");
-    canvas.onmousedown = function(evt) {};
-    canvas.onmousemove = function(event) {};
-    canvas.onmouseup = function(e) {
+    canvas.onmousedown = function (evt) { };
+    canvas.onmousemove = function (event) { };
+    canvas.onmouseup = function (e) {
       theWheel.startAnimation();
       if (theWheel.stopAnimation) {
         resetWheel();
