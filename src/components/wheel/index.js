@@ -28,7 +28,7 @@ class Wheel extends Component {
 
     var theWheel = new Winwheel({
       numSegments: 11, // Specify number of segments.
-      outerRadius: 212, // Set outer radius so wheel fits inside the background.
+      outerRadius: 213, // Set outer radius so wheel fits inside the background.
       textFontSize: 28, // Set font size as desired.
       onStopRotation: onStopRotation,
       // Define segments including colour and text.
